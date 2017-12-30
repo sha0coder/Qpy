@@ -1,9 +1,11 @@
      QuickPY, sha0coder's  automation.
 
+    * BLOG
+	http://jolmos.blogspot.com.es/
 
     * EXAMPLES
          
-    Q('http://site.com').download().split().must('a./').cut('/',0,-2).dontContains('http').save('test.txt')
+    Q('hxxp://site.com').download().split().must('a./').cut('/',0,-2).dontContains('http').save('test.txt')
 
     Q('A SANTA LIVED AS A DEVIL AT NASA').reverse().disp()
 
