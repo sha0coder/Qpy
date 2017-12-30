@@ -1,0 +1,63 @@
+     QuickPY, sha0coder's  automation.
+
+
+    * EXAMPLES
+         
+    Q('http://site.com').download().split().must('a./').cut('/',0,-2).dontContains('http').save('test.txt')
+
+    Q('A SANTA LIVED AS A DEVIL AT NASA').reverse().disp()
+
+
+    * METHODS
+
+    Introspection:
+        trace
+
+    HTTP:
+        httpCode(timeout=5)
+        download(timeout=5)
+
+    Data display
+        disp
+        dispType
+        dir
+
+    Random:
+        randInt(n1, n2)
+        randStr(len,min=0,max=255)
+
+    Data manipulation:
+        sort
+        uniq
+        strip
+        join
+        merge
+        split
+        contains
+        notContain
+        must
+        sz
+        clear
+        append
+        prepend
+        walk
+
+    IO:
+        read
+        write
+        
+
+    Control flow:
+        isNum(callback)
+        isStr(callback)
+        isList(callback)
+        
+
+
+    File operations:
+        save
+        load
+        appendFile
+
+
+
