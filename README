@@ -5,9 +5,9 @@
 
     * EXAMPLES
 
-    Q('http://site.com').download().before('<h1>','</h1>').save('titles.txt').disp()
+    Q('http://site .com').download().before('<h1>','</h1>').save('titles.txt').disp()
          
-    Q('http://site.com').download().split().must('a./').cut('/',0,-2).dontContains('http').save('test.txt')
+    Q('http://site .com').download().split().must('a./').cut('/',0,-2).dontContains('http').save('test.txt')
     
 
     Q('A SANTA LIVED AS A DEVIL AT NASA').reverse().disp()
