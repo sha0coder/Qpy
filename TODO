@@ -1,0 +1,10 @@
+
+def between(s, b, a):
+    offb = s.find(b)
+    if offb > 0:
+        offb += len(b)
+        offa = s.find(a,offb+1)
+        if offa > offb:
+            return s[offb:offa]
+    return None
+
