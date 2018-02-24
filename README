@@ -4,8 +4,11 @@
 	http://jolmos.blogspot.com.es/
 
     * EXAMPLES
+
+    Q('http://site.com').download().before('<h1>','</h1>').save('titles.txt').disp()
          
-    Q('hxxp://site.com').download().split().must('a./').cut('/',0,-2).dontContains('http').save('test.txt')
+    Q('http://site.com').download().split().must('a./').cut('/',0,-2).dontContains('http').save('test.txt')
+    
 
     Q('A SANTA LIVED AS A DEVIL AT NASA').reverse().disp()
 
@@ -62,4 +65,6 @@
         appendFile
 
 
+  * Donation:
+ 	Bitcoin: 3GrtoFKp7UAf2eqTeUnN8eM3V7RS3n25Ae
 
