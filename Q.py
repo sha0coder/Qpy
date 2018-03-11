@@ -282,10 +282,17 @@ class Q:
         self.param = new
         return self.tr()
 
+
     def save(self, filename):
-        fd = open(filename,'wb')
-        fd.write(self.param.encode('utf8'))
-        fd.close()
+        if self._str():
+            fd = open(filename,'wb')
+            fd.write(self.param.encode('utf8'))
+            fd.close()
+	    elif self._list():
+	        fd = open(filename,'w')
+            for p in self.param:
+                fd.write(p+'\n')
+            fd.close()
         return self.tr()
 
     def saveAppend(self, filename):
@@ -294,6 +301,20 @@ class Q:
         fd.write(self.param)
         fd.close()
         return self.tr()
+
+    def loadLines(self,filename=None):
+	if filename:
+	    fd = open(filename,'r')
+	else:
+	    fd = open(self.param,'r')
+        self.param = []
+        for l in fd.readlines():
+            l = l.strip()
+            if l:
+                self.param.append(l)
+        fd.close()
+        return self.tr()
+            
 
     def load(self,filename=None):
         if filename:
